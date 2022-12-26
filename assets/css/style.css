@@ -1,0 +1,535 @@
+/* Ja sé que no és tant bona idea importar les fonts per aquí, diuen, perquè la performance de descàrrega no és tant bona perquè interrom la descàrrega de la pàgina i la fa seqüencial. Això no superaria un test de velocitat de càrrega. Però em resulta més còmode per maquetar perquè està centralitzat en un sol arxiu. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+
+:root {
+    --color1: #000;
+    --htop: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+body,
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    background-color: #00000099;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffff0099;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #00000033;
+}
+
+
+p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+a {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#wrapp>header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: calc(100vw/6);
+    line-height: calc(100vw/6);
+    margin: 0;
+    opacity: .5;
+    color: rgba(255, 255, 0, 1);
+    mix-blend-mode: screen;
+}
+
+main h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: calc(100vw/24);
+    line-height: calc(100vw/24);
+    margin-bottom: 0;
+}
+
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: calc(100vw/36);
+    font-weight: 400;
+    line-height: calc(100vw/36);
+    text-transform: uppercase;
+}
+
+
+.dark {
+    background: #333;
+    color: white;
+}
+
+.mid-dark {
+    background: #ccc;
+}
+
+.mid-light {
+    background: #eaeaea;
+}
+
+.mb2rem {
+    margin-bottom: 2rem;
+}
+
+.mb4rem {
+    margin-bottom: 4rem;
+}
+
+.mb8rem {
+    margin-bottom: 8rem;
+}
+
+
+#wrapp {
+    min-height: calc(100vh);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+#top {
+    background: var(--color1);
+    height: var(--htop);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: .80rem;
+    text-transform: uppercase;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+#logo {
+    margin: 0;
+    padding: 0;
+}
+
+#logo img {
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+    height: calc(1.5*var(--htop));
+    position: relative;
+    top: calc(.5*var(--htop));
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+
+#menu-cv {
+    position: fixed;
+    left: 4rem;
+    top: 14rem;
+    background: #ff0;
+    padding: 1rem 3rem;
+    margin: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+}
+
+
+#hero {
+    position: relative;
+    top: var(--htop);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+    margin-bottom: 2rem;
+}
+
+#hero::before {
+    background: linear-gradient(#ff000033, #00000033, #00ff0033);
+    /* mix-blend-mode:darken; */
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    z-index: 3;
+}
+
+#hero h1 {
+    z-index: 5;
+}
+
+/* No és lo ideal que tots els estils de les diferents pàgines estiguin en un sol arxiu. Només els comuns haurien d'estar en el mateix arxiu. I els independents haurien d'estar o bé entre styles o bé en un altre full d'estils cridat més tardanament que el comú. Tot això ho sé. Però per fer provatures em va bé. */
+@keyframes hero_porfoli {
+    0% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+    20% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/2.png");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+    40% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+    60% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/mockup.jpg");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+    80% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/a1.png");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+    100% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png");
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+
+}
+
+
+/* Ja sé que això és un pecat, lo de fer servir un estil personalitzat reutilitzable només per un sol cop. Es podria fer d'una altra manera. No segueix bones pràctiques, ni BEM ni res. */
+.hero-porfoli {
+    height: calc(100vh/1.2);
+    color: white;
+    position: relative;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png"); */
+    background-size: cover;
+    background-repeat: none !important;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation-name: hero_porfoli;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+.hero-porfoli small {
+    color: #fff3;
+}
+
+
+.hero-contacte {
+    height: calc(100vh/2.5);
+    color: white;
+    position: relative;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/2.png");
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.hero-cv {
+    align-content: flex-start;
+    background: #000;
+    color: whitesmoke;
+}
+
+
+
+
+main>section {
+    padding: 2rem 0 8rem 0;
+}
+
+main>section header {
+    text-align: center;
+}
+
+.intrawrap {
+    max-width: 960px;
+    width: 100vh;
+    margin: auto;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#hola .flex {
+    gap: 4rem;
+}
+
+#aficions .flex {
+    justify-content: space-around;
+    gap: .1rem;
+}
+
+.dostres {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: calc(200% / 3.3);
+
+}
+
+.untres {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(100% / 3.3);
+
+}
+
+.ilus {
+    width: 100%;
+}
+
+.rodo {
+    border-radius: 50%;
+}
+
+
+#projectes {
+    padding: 4rem 0 8rem 0;
+    background: linear-gradient(#ffffffff, #ffffffcc, #ffffffff), url("../img/fons1.jpg");
+    background-attachment: fixed;
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+}
+
+#projectes article {
+    border: 1rem solid #eee4;
+    /* border-radius: 0 0 1rem 1rem; */
+    background: #eee;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+#projectes article *:last-child {
+    margin: auto auto 1rem auto;
+}
+
+
+
+
+#projectes figure {
+    height: 160px;
+    margin-bottom: 1rem
+}
+
+#projectes .ilus {
+    visibility: hidden;
+}
+
+#projectes article:nth-child(1) figure {
+    background: url("../img/a1.png");
+    background-size: cover;
+}
+
+#projectes article:nth-child(1) figure::before {
+    content: "SCI-FI";
+    display: flex;
+    height: 100%;
+    justify-content: end;
+    align-items: flex-end;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    ;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: bold;
+    color: #ff39;
+    background: #C0f6;
+    mix-blend-mode: luminosity;
+}
+
+#projectes article:nth-child(2) figure {
+    background: url("../img/2.png");
+    background-size: cover;
+}
+
+#projectes article:nth-child(2) figure::before {
+    content: "PERSPECTIVES";
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    ;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff6;
+    background: #0CC3;
+    /* mix-blend-mode:difference; */
+}
+
+
+#projectes article:nth-child(1) {
+    rotate: 4deg;
+    translate: 2rem 1rem;
+}
+
+#projectes article:nth-child(2) {
+    translate: 1.5rem 1rem;
+}
+
+#projectes article:nth-child(3) {
+    rotate: 8deg;
+}
+
+#projectes article:nth-child(3) figure {
+    background: url("../img/4.png");
+    background-size: cover;
+}
+
+#projectes article:nth-child(3) figure::before {
+    content: "NAÏF";
+    display: flex;
+    height: 100%;
+    text-align: center;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    ;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff06;
+    background: #3c96;
+    mix-blend-mode: luminosity;
+}
+
+#projectes p {
+    padding: 0 1.5rem;
+}
+
+
+
+#experiencia .flex {
+    justify-content: space-around;
+}
+
+#experiencia article {
+    display: flex;
+    justify-content: center;
+}
+
+#experiencia .flex article img {
+    max-width: 50%;
+}
+
+
+
+#aficions .flex {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+#aficions .flex article {
+    background: #ccc;
+    padding: 1rem;
+    flex-basis: calc(100%/3.4);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+#idiomes table {
+    border: 1px solid #333;
+}
+
+#idiomes table td, #idiomes table th {
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid #666;
+}
+
+
+
+
+
+#nom,
+#email,
+#areatext {
+    width: 100%;
+}
+
+#parlem div:last-child {
+    text-align: center;
+}
+
+#parlem div {
+    margin-bottom: 1rem;
+}
+
+
+#wrapp>footer {
+    background: #000;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    height: var(--htop-);
+    margin-top: var(--htop);
+
+}
+
+#wrapp>footer img {
+    height: 30px;
+}
