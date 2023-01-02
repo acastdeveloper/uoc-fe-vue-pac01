@@ -4,6 +4,14 @@
 /* 320 */
 @media only screen and (min-width: 320px) {
 
+    h2 {
+        font-size: var(--fs);
+        line-height: var(--fs);
+        padding-top: 0;
+        margin: 0;
+        margin-bottom: calc(.5*var(--fs));
+    }
+
     #top {
         font-size: .80rem;
     }
@@ -16,16 +24,37 @@
     .hero-porfoli {
         height: 65vh;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
+        background-attachment: fixed;
         background-size: cover;
-        background-position: right;
+        background-position: top center;
     }
 
 
     .hero-porfoli::before {
         mix-blend-mode: color-burn;
-        background-color: blue;
     }
 
+    #contacte #hero {
+        /* background:url("../img/2.png");
+        background-size: cover; */
+        padding: 4rem;
+        background: #ff0;
+    }
+
+    #contacte #hero::before {
+        background: url("../img/a1.png");
+        mix-blend-mode: screen;
+        background-size: cover;
+        background-repeat: none;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
+
+    #contacte #hero h1 {
+        color: black;
+        z-index: 10;
+    }
 
     #projectes article {
         margin-bottom: 1rem;
@@ -63,12 +92,25 @@
     }
 
     #dades-personals {
+        color: black;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        background: lightgrey;
+        background:linear-gradient(rgba(173, 216, 230,.8), rgba(211, 211, 211,.8)), url("../img/3.png");
+        background-position: bottom;
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
         mix-blend-mode: darken;
     }
+
+    #dades-personals::before {
+        content: " ";
+        height: 100%;
+        background: #000;
+        background-blend-mode: darken;
+        z-index: 20;
+    }
+
 
     #dades-personals h1 {
         font-family: 'Bebas Neue', cursive;
@@ -79,6 +121,7 @@
 
 
     #menu-cv {
+        z-index: 30;
         background: #ff0c;
         padding: 3rem 3rem;
         margin: 0;
@@ -108,18 +151,8 @@
         border-bottom: 0;
     }
 
-
-
-
-
 }
 
-
-
-
-
-/* 480 */
-@media only screen and (min-width: 480px) {}
 
 
 
@@ -129,9 +162,9 @@
 @media only screen and (min-width: 768px) {
 
     h2 {
-        font-size: calc(100vw/16);
-        line-height: calc(100vw/16);
-        margin-bottom: 1rem;
+        font-size: var(--fsxl);
+        line-height: var(--fsxl);
+        margin-bottom:calc(.25*var(--fsxl))
     }
 
 
@@ -206,6 +239,17 @@
         }
     }
 
+    #hero::before {
+        background: linear-gradient(#ff000033, #00000033, #00ff0033);
+        background-attachment: fixed;
+        /* mix-blend-mode:darken; */
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        z-index: 3;
+    }
+
     .hero-porfoli {
         height: calc(100vh/1.2);
         animation-name: hero_porfoli;
@@ -241,6 +285,19 @@
         flex-basis: calc(100% / 3.3);
     }
 
+
+    .hero-contacte {
+        height: calc(100vh/2.5);
+        color: white;
+        position: relative;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
+        /* background-size: cover; */
+        background-size: 40%;
+        background-position: bottom center;
+        background-attachment: fixed;
+    }
+
+
 }
 
 
@@ -251,10 +308,6 @@
 /* 1024px */
 @media only screen and (min-width: 1024px) {
 
-    h2 {
-        font-size: calc(100vw/36);
-        line-height: calc(100vw/36);
-    }
 
 
     .flexXL {

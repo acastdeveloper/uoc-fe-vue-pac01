@@ -8,6 +8,8 @@
 :root {
     --color1: #000;
     --htop: 50px;
+    --fs:calc(100vw/10);
+    --fsxl:calc(100vw/20);
 }
 
 /* INICIALS */
@@ -92,9 +94,8 @@ body::-webkit-scrollbar-track {
     font-size: calc(100vw/6);
     line-height: calc(100vw/6);
     margin: 0;
-    opacity: .5;
+    opacity: .85;
     color: rgba(255, 255, 0, 1);
-    mix-blend-mode: screen;
 }
 
 main {
@@ -235,16 +236,7 @@ nav ul li a {
     background-repeat: no-repeat;
 }
 
-.hero-contacte {
-    height: calc(100vh/2.5);
-    color: white;
-    position: relative;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/2.png");
-    background-size: cover;
-    background-position: bottom center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
+
 
 .hero-cv {
     align-content: flex-start;
@@ -254,7 +246,7 @@ nav ul li a {
 
 
 main>section {
-    padding: 2rem 0 8rem 0;
+    padding: calc(2*var(--htop)) 0 calc(2*var(--htop)) 0;
 }
 
 main>section header {
