@@ -4,12 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
-
+/* VARIABLES */
 :root {
     --color1: #000;
     --htop: 50px;
 }
 
+/* INICIALS */
 * {
     box-sizing: border-box;
 }
@@ -21,8 +22,8 @@ html {
 html,
 body {
     min-height: 100%;
-    font-family: 'Roboto Slab', serif;
     font-size: 14px;
+    font-family: 'Roboto Slab', serif;
 }
 
 body,
@@ -31,6 +32,45 @@ figure {
     margin: 0;
 }
 
+p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+#formacio ul, #competencies-digitals ul {
+    padding-left: .1rem;
+    list-style: none;
+}
+
+#formacio ul li, #competencies-digitals ul li {
+    padding: .75rem 0;
+    list-style: outside;
+ }
+
+
+/* #formacio ul li::before {
+display: inline-block;
+content:"- ";
+} */
+
+
+
+
+
+
+
+
+a {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* SCROLLBAR, NOMÉS PER CHROME */
 body::-webkit-scrollbar {
     background-color: #00000099;
 }
@@ -43,20 +83,8 @@ body::-webkit-scrollbar-track {
     background-color: #00000033;
 }
 
-
-p {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-
-a {
-    color: var(--color1);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+#wrapp {
+    max-width: 100%;
 }
 
 #wrapp>header h1 {
@@ -69,24 +97,23 @@ a:hover {
     mix-blend-mode: screen;
 }
 
-main h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: calc(100vw/24);
-    line-height: calc(100vw/24);
-    margin-bottom: 0;
+main {
+    padding-top: var(--htop);
 }
-
 
 h2 {
     font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: calc(100vw/36);
-    font-weight: 400;
-    line-height: calc(100vw/36);
     text-transform: uppercase;
+    font-weight: 400;
+    font-size: calc(100vw/12);
+    line-height: calc(100vw/12);
 }
 
-.sel {font-weight: bold;}
+
+
+.sel {
+    font-weight: bold;
+}
 
 .dark {
     background: #333;
@@ -131,7 +158,6 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: .5rem 2rem .5rem 2rem;
-    font-size: .80rem;
     text-transform: uppercase;
     position: fixed;
     left: 0;
@@ -148,7 +174,7 @@ h2 {
     margin: 0;
     padding: 0;
     border-radius: 50%;
-    border: 6px solid white;
+    border: 4px solid white;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
     height: calc(1.5*var(--htop));
     position: relative;
@@ -163,24 +189,11 @@ nav ul {
 nav ul li {
     list-style: none;
     display: inline;
-    margin-left: 1rem;
 }
 
 nav ul li a {
     color: #fff;
 }
-
-
-#menu-cv {
-    position: fixed;
-    left: 4rem;
-    top: 14rem;
-    background: #ff0c;
-    padding: 1rem 3rem;
-    margin: 0;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
-}
-
 
 #hero {
     position: relative;
@@ -209,55 +222,9 @@ nav ul li a {
 }
 
 /* No és lo ideal que tots els estils de les diferents pàgines estiguin en un sol arxiu. Només els comuns haurien d'estar en el mateix arxiu. I els independents haurien d'estar o bé entre styles o bé en un altre full d'estils cridat més tardanament que el comú. Tot això ho sé. Però per fer provatures em va bé. */
-@keyframes hero_porfoli {
-    0% {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png");
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-
-    20% {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/2.png");
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-
-    40% {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-
-    60% {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/mockup.jpg");
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-
-    80% {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/a1.png");
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-
-    100% {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png");
-        background-size: cover;
-        background-position: bottom;
-        background-attachment: fixed;
-    }
-
-}
-
 
 /* Ja sé que això és un pecat, lo de fer servir un estil personalitzat reutilitzable només per un sol cop. Es podria fer d'una altra manera. No segueix bones pràctiques, ni BEM ni res. */
 .hero-porfoli {
-    height: calc(100vh/1.2);
     color: white;
     position: relative;
     /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png"); */
@@ -266,15 +233,7 @@ nav ul li a {
     background-position: bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    animation-name: hero_porfoli;
-    animation-iteration-count: infinite;
-    animation-duration: 6s;
 }
-
-.hero-porfoli small {
-    color: #fff3;
-}
-
 
 .hero-contacte {
     height: calc(100vh/2.5);
@@ -293,6 +252,7 @@ nav ul li a {
     color: whitesmoke;
 }
 
+
 main>section {
     padding: 2rem 0 8rem 0;
 }
@@ -303,36 +263,10 @@ main>section header {
 
 .intrawrap {
     max-width: 960px;
-    width: 100vh;
+    width: 100vw;
     margin: auto;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-#hola .flex {
-    gap: 4rem;
-}
-
-#aficions .flex {
-    justify-content: space-around;
-    gap: .1rem;
-}
-
-.dostres {
-    flex-grow: 2;
-    flex-shrink: 2;
-    flex-basis: calc(200% / 3.3);
-}
-
-.untres {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: calc(100% / 3.3);
-
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .ilus {
@@ -347,8 +281,9 @@ main>section header {
     padding: 4rem 0 8rem 0;
     background: linear-gradient(#ffffffff, #ffffffcc, #ffffffff), url("../img/fons1.jpg");
     background-attachment: fixed;
-    background-size: cover 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #projectes article {
@@ -413,21 +348,6 @@ main>section header {
     font-weight: bold;
     color: #fff6;
     background: #0CC3;
-    /* mix-blend-mode:difference; */
-}
-
-
-#projectes article:nth-child(1) {
-    rotate: 4deg;
-    translate: 2rem 1rem;
-}
-
-#projectes article:nth-child(2) {
-    translate: 1.5rem 1rem;
-}
-
-#projectes article:nth-child(3) {
-    rotate: 8deg;
 }
 
 #projectes article:nth-child(3) figure {
@@ -453,26 +373,27 @@ main>section header {
     padding: 0 1.5rem;
 }
 
-#experiencia .flex {
-    justify-content: space-around;
-}
-
 #experiencia article {
     display: flex;
     justify-content: center;
 }
 
-#experiencia .flex article img {
+#experiencia .flexXL article img {
     max-width: 50%;
 }
 
-#aficions .flex {
+
+
+
+
+
+#aficions .flexXL {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
 }
 
-#aficions .flex article {
+#aficions .flexXL article {
     background: #ccc;
     padding: 1rem;
     flex-basis: calc(100%/3.4);
@@ -482,14 +403,20 @@ main>section header {
 }
 
 
+#idiomes {
+    margin-bottom: 0;
+}
+
 #idiomes table {
     border: 1px solid #333;
-    border-collapse:collapse;
+    border-collapse: collapse;
+    max-width: 90vw;
+    margin: auto;
 }
 
 #idiomes table td,
 #idiomes table th {
-    padding: 1rem;
+    padding: .5rem;
     margin: 0;
     border: 1px solid #333;
     text-align: center;
@@ -497,7 +424,7 @@ main>section header {
 
 #nom,
 #email,
-#areatext  {
+#areatext {
     width: 100%;
     padding: 1rem;
     font-family: "Roboto Slab", serif;
@@ -532,7 +459,6 @@ main>section header {
     gap: 1rem;
     padding: 1rem;
     height: var(--htop-);
-    margin-top: var(--htop);
 }
 
 #wrapp>footer img {
