@@ -283,15 +283,6 @@
 }
 
 
-@media (orientation: landscape) and (min-width:780px) {
- .intrawrap {
-    padding-right: 30rem!important;
-}
- }
-
-
-
-
 
 /* 1024px */
 @media only screen and (min-width: 1024px) {
