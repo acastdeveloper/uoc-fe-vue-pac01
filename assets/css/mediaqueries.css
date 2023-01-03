@@ -5,6 +5,11 @@
 /* 320 */
 @media only screen and (min-width: 320px) {
 
+    main>section {
+        padding: 3rem 0;
+    }
+
+
     h2 {
         font-size: var(--fs);
         line-height: var(--fs);
@@ -17,19 +22,13 @@
         font-size: .80rem;
     }
 
-    /* #top nav li {
-        margin-left: .3rem;
-    } */
+    #top nav li {
+        margin-left: .75rem;
+    }
 
     #submenu-cv {
         display: none;
     }
-
-
-    main>section {
-        padding: calc(2*var(--htop)) 0 calc(2*var(--htop)) 0;
-    }
-
 
     .hero-porfoli {
         height: 65vh;
@@ -103,9 +102,10 @@
 
     #dades-personals {
         color: black;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        background: linear-gradient(rgba(173, 216, 230, .8), rgba(211, 211, 211, .8)), url("../img/3.png");
+        /* padding-top: 2rem; */
+        /* padding-bottom: 2rem; */
+        /* margin-top: var(--htop); */
+        /* background: linear-gradient(rgba(173, 216, 230, .8), rgba(211, 211, 211, .8)), url("../img/3.png"); */
         background-position: bottom;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -139,6 +139,9 @@
 
 /* 768 */
 @media only screen and (min-width: 768px) {
+    main>section {
+        padding: 4rem 0;
+    }
 
     h2 {
         font-size: var(--fsxl);
@@ -280,6 +283,12 @@
 }
 
 
+@media (orientation: landscape) and (min-width:780px) {
+ .intrawrap {
+    padding-right: 30rem!important;
+}
+ }
+
 
 
 
@@ -381,6 +390,10 @@
         margin: 0;
     }
 
+    #top nav li {
+        margin-left: 0;
+    }
+
     #logo img {
         position: relative;
         top: 0;
@@ -403,9 +416,8 @@
 
     nav ul li {
         display: block;
-        padding: 1rem 1rem;
         margin-top: 1rem;
-        border-bottom: 1px solid grey important;
+        border-bottom: 1px solid grey;
         text-align: left;
         font-size: 1rem;
     }
@@ -414,17 +426,12 @@
         border: none;
     }
 
-    #submenu-cv {
+    nav a {
+        /* border: 1px solid pink; */
+        padding: .75rem .75rem;
         display: block;
     }
 
-    #submenu-cv li {
-        text-align: right;
-        padding: 0;
-        border: 0;
-        content: "-";
-        color: black;
-    }
 
     nav ul:has(#submenu-cv) li {
         border: 0;
@@ -439,6 +446,22 @@
         color: #000;
     }
 
+    #submenu-cv {
+        display: block;
+    }
+
+    #submenu-cv li {
+        text-align: right;
+        content: "-";
+        color: black;
+        border-bottom: 1px solid gray !important;
+    }
+
+    #submenu-cv li:last-child {
+        border-bottom: 0 !important;
+        /* Cada cop que posem un !important mor un pardal de la pena. */
+
+    }
 
 
 }
@@ -457,7 +480,7 @@
 
     section,
     section>* {
-        padding: .25rem !important;
+        padding: .25rem;
         margin: 0;
     }
 

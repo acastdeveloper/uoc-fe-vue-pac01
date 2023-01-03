@@ -305,7 +305,7 @@ nav ul li a {
 
 
 main>section {
-    padding: calc(2*var(--htop)) 0 calc(2*var(--htop)) 0;
+    /* padding: calc(2*var(--htop)) 0 calc(2*var(--htop)) 0; */
 }
 
 main>section header {
