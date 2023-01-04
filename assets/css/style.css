@@ -1,10 +1,7 @@
-/* Ja sé que no és tant bona idea importar les fonts per aquí, diuen, perquè la performance de descàrrega no és tant bona perquè interrom la descàrrega de la pàgina i la fa seqüencial. Això no superaria un test de velocitat de càrrega. Però em resulta més còmode per maquetar perquè està centralitzat en un sol arxiu. */
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
-/* VARIABLES */
 :root {
     --color1: #000;
     --htop: 50px;
@@ -12,7 +9,6 @@
     --fsxl: calc(100vw/20);
 }
 
-/* INICIALS */
 * {
     box-sizing: border-box;
 }
@@ -39,7 +35,6 @@ p {
     padding-top: 0;
 }
 
-
 #formacio ul,
 #competencies-digitals ul {
     padding-left: .1rem;
@@ -48,20 +43,16 @@ p {
 
 #formacio ul li,
 #competencies-digitals ul li {
-    padding: .75rem 0;
-    list-style: outside;
+    padding: .25rem 0;
+    list-style: none;
 }
 
-
-/* #formacio ul li::before {
-display: inline-block;
+#formacio ul li::before,
+#competencies-digitals ul li::before
+{
 content:"- ";
-} */
-
-
-
-
-
+text-indent: -5px;
+}
 
 
 
@@ -74,7 +65,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* SCROLLBAR, NOMÉS PER CHROME */
 body::-webkit-scrollbar {
     background-color: #00000099;
 }
@@ -91,54 +81,39 @@ body::-webkit-scrollbar-track {
     max-width: 100%;
 }
 
-#wrapp>header h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: calc(100vw/6);
-    line-height: calc(100vw/6);
+#cv #formacio ul {
+    list-style: none;
+}
+
+#menu-cv {
+    padding: 0 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+    text-align: center;
+    z-index: 100;
+}
+
+#menu-cv ul {
     margin: 0;
-    opacity: .85;
-    color: rgba(255, 255, 0, 1);
+    padding: 0;
+    list-style: none;
 }
 
-#dades-personals h1 {
-    font-family: 'Bebas Neue', cursive;
+#menu-cv ul li {
+    display: block;
+    border-bottom: 1px solid black;
 }
 
- #menu-cv {
-        z-index: 30;
-        background: #ff0c;
-        padding: 3rem 3rem;
-        margin: 0;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
-        text-align: center;
-    }
+#menu-cv ul li:last-child {
+    border-bottom: 0
+}
 
-    #menu-cv h3 {
-        font-weight: 800;
-        font-size: 1.5rem;
-        display: none;
-    }
-
-    #menu-cv ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    #menu-cv ul li {
-        display: block;
-        padding: .75rem 0;
-        border-bottom: 1px solid black;
-    }
-
-    #menu-cv ul li:last-child {
-        border-bottom: 0;
-    }
-
-
+#menu-cv ul li a {
+    display: block;
+    padding: .5rem 1rem;
+}
 
 main {
-    padding-top: var(--htop);
+    position: relative;
     margin: 0;
 }
 
@@ -149,8 +124,6 @@ h2 {
     font-size: calc(100vw/12);
     line-height: calc(100vw/12);
 }
-
-
 
 .sel {
     font-weight: bold;
@@ -181,6 +154,14 @@ h2 {
     margin-bottom: 8rem;
 }
 
+.fs_tresquarts {
+    font-size: 1.4rem
+}
+
+#tagname::after {
+    content: "# D E S I G N V E L O V E R ";
+    letter-spacing: .14rem;
+}
 
 #wrapp {
     min-height: calc(100vh);
@@ -191,21 +172,13 @@ h2 {
     justify-content: flex-start;
 }
 
-
-
-
 #top {
     background: var(--color1);
-    height: var(--htop);
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     padding: .5rem 2rem .5rem 2rem;
     text-transform: uppercase;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 3;
 }
 
 #logo {
@@ -221,8 +194,7 @@ h2 {
     border: 4px solid white;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
     height: calc(1.5*var(--htop));
-    position: relative;
-    top: calc(.5*var(--htop));
+    position: relative
 }
 
 #logotipus {
@@ -234,7 +206,6 @@ h2 {
     padding: 0 1rem;
     position: relative;
     top: .25rem;
-
 }
 
 #top nav {
@@ -257,19 +228,15 @@ nav ul li a {
 
 #hero {
     position: relative;
-    top: var(--htop);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 0;
-    margin-bottom: 2rem;
 }
 
 #hero::before {
     background: linear-gradient(#ff000033, #00000033, #00ff0033);
     background-attachment: fixed;
-    /* mix-blend-mode:darken; */
     width: 100%;
     height: 100%;
     content: "";
@@ -281,31 +248,20 @@ nav ul li a {
     z-index: 5;
 }
 
-/* No és lo ideal que tots els estils de les diferents pàgines estiguin en un sol arxiu. Només els comuns haurien d'estar en el mateix arxiu. I els independents haurien d'estar o bé entre styles o bé en un altre full d'estils cridat més tardanament que el comú. Tot això ho sé. Però per fer provatures em va bé. */
-
-/* Ja sé que això és un pecat, lo de fer servir un estil personalitzat reutilitzable només per un sol cop. Es podria fer d'una altra manera. No segueix bones pràctiques, ni BEM ni res. */
 .hero-porfoli {
     color: white;
     position: relative;
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png"); */
-    background-size: cover;
+    /* background-size: cover;
     background-repeat: none !important;
-    background-position: bottom;
+    background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
-
-
 
 .hero-cv {
     align-content: flex-start;
     background: #000;
     color: whitesmoke;
-}
-
-
-main>section {
-    /* padding: calc(2*var(--htop)) 0 calc(2*var(--htop)) 0; */
 }
 
 main>section header {
@@ -339,9 +295,8 @@ main>section header {
 
 #projectes article {
     border: 1rem solid #eee4;
-    /* border-radius: 0 0 1rem 1rem; */
     background: #eee;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
     display: flex;
     flex-direction: column;
 }
@@ -386,7 +341,6 @@ main>section header {
 
 #projectes article:nth-child(2) figure::before {
     content: "PERSPECTIVES";
-    /* display: block; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -397,7 +351,7 @@ main>section header {
     font-size: 3rem;
     font-weight: bold;
     color: #fff6;
-    background: #0CC3;
+    background: #03;
 }
 
 #projectes article:nth-child(3) figure {
@@ -432,11 +386,6 @@ main>section header {
     max-width: 50%;
 }
 
-
-
-
-
-
 #aficions .flexXL {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -452,7 +401,6 @@ main>section header {
     gap: 1rem;
 }
 
-
 #idiomes {
     margin-bottom: 0;
 }
@@ -460,8 +408,7 @@ main>section header {
 #idiomes table {
     border: 1px solid #333;
     border-collapse: collapse;
-    max-width: 90vw;
-    /* margin: auto; */
+    max-width: 90vw
 }
 
 #idiomes table td,
@@ -489,7 +436,6 @@ main>section header {
     margin-top: 2rem;
     margin-bottom: .5rem;
 }
-
 
 #parlem div:last-child {
     text-align: center;

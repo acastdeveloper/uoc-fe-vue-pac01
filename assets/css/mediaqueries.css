@@ -1,116 +1,103 @@
-/* MEDIA QUERIES pensats per Mobile-First */
-
-
-/* ==== BREACKPOINTS ==== */
-/* 320 */
-@media only screen and (min-width: 320px) {
-
-    main>section {
-        padding: 3rem 0;
+@media only screen and (min-width:320px) {
+    #wrapp>header h1 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: calc(100vw/6);
+        line-height: calc(100vw/6);
+        margin: 0;
+        padding: 0;
+        opacity: .85;
+        color: rgba(255, 255, 0, 1)
     }
 
+    main>section {
+        padding: 3rem 0
+    }
 
     h2 {
         font-size: var(--fs);
         line-height: var(--fs);
         padding-top: 0;
         margin: 0;
-        margin-bottom: calc(.5*var(--fs));
+        margin-bottom: calc(.5*var(--fs))
     }
 
     #top {
-        font-size: .80rem;
+        font-size: .80rem
     }
 
     #top nav li {
-        margin-left: .75rem;
+        margin-left: .75rem
     }
 
     #submenu-cv {
-        display: none;
+        display: none
     }
 
     .hero-porfoli {
         height: 65vh;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
+        background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/4.png");
         background-attachment: fixed;
         background-size: cover;
-        background-position: top center;
+        background-position: top center
     }
 
-
     .hero-porfoli::before {
-        mix-blend-mode: color-burn;
+        mix-blend-mode: color-burn
     }
 
     #contacte #hero {
-        /* background:url("../img/2.png");
-        background-size: cover; */
-        padding: 4rem;
-        background: #ff0;
+        background: url("../img/a1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 3rem 0
     }
 
     #contacte #hero::before {
-        background: url("../img/a1.png");
-        mix-blend-mode: screen;
-        background-size: cover;
-        background-repeat: none;
-        width: 100%;
-        height: 100%;
-        content: "";
-    }
-
-    #contacte #hero h1 {
-        color: black;
-        z-index: 10;
+        background: #333333;
+        mix-blend-mode: multiply
     }
 
     #projectes article {
-        margin-bottom: 1rem;
+        margin-bottom: 1rem
     }
 
     .flexXL {
-        display: block;
+        display: block
     }
 
     .flexXL>* {
-        margin-bottom: 1rem;
+        margin-bottom: 1rem
     }
 
     #hola {
-        padding-bottom: 1rem;
+        padding-bottom: 1rem
     }
 
     #hola .untres {
-        /* background: #000; */
-        text-align: center;
+        text-align: center
     }
 
     #hola .ilus {
         max-width: 60vw;
         margin: 2rem auto 2rem auto;
         border: 6px solid #fff;
-        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5)
     }
-
 
     #aficions article {
         max-width: 70vw;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto
     }
 
     #dades-personals {
         color: black;
-        /* padding-top: 2rem; */
-        /* padding-bottom: 2rem; */
-        /* margin-top: var(--htop); */
-        /* background: linear-gradient(rgba(173, 216, 230, .8), rgba(211, 211, 211, .8)), url("../img/3.png"); */
         background-position: bottom;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        mix-blend-mode: darken;
+        mix-blend-mode: darken
     }
 
     #dades-personals::before {
@@ -122,25 +109,20 @@
     }
 
 
-    #dades-personals h1 {
-        font-size: calc(100vw/6);
-        line-height: calc(100vw/6);
-    }
-
-
-
-
 }
 
+@media only screen and (min-width:485px) {
+    #menu-cv {
+        z-index: 5;
+        background-color: #ff0;
+        margin: 0;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, .5)
+    }
+}
 
-
-
-
-
-/* 768 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width:768px) {
     main>section {
-        padding: 4rem 0;
+        padding: 4rem 0
     }
 
     h2 {
@@ -150,222 +132,214 @@
     }
 
 
-    #menu-cv {
-        position: fixed;
-        right: 2rem;
-        top: 6rem;
-        margin: 0;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
-    }
 
-
-    #dades-personals {
-        padding-bottom: 8rem;
-    }
-
-    #dades-personals h1 {
-        font-family: 'Bebas Neue', cursive;
-        font-size: calc(100vw/16);
-        line-height: calc(100vw/16);
-        margin-bottom: 0;
-    }
 
     #dades-personals h2 {
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 0
     }
 
-
+    #dades-personals ul {
+        list-style: none;
+    }
 
     @keyframes hero_porfoli {
         0% {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png");
+            background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/3.png");
             background-size: cover;
-            background-position: bottom;
-            background-attachment: fixed;
+            background-position: center;
+            background-attachment: fixed
         }
 
         20% {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/2.png");
+            background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/2.png");
             background-size: cover;
-            background-position: bottom;
-            background-attachment: fixed;
+            background-position: center;
+            background-attachment: fixed
         }
 
         40% {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
+            background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/4.png");
             background-size: cover;
-            background-position: bottom;
-            background-attachment: fixed;
+            background-position: center;
+            background-attachment: fixed
         }
 
         60% {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/mockup.jpg");
+            background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/mockup.jpg");
             background-size: cover;
-            background-position: bottom;
-            background-attachment: fixed;
+            background-position: center;
+            background-attachment: fixed
         }
 
         80% {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/a1.png");
+            background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/a1.png");
             background-size: cover;
-            background-position: bottom;
-            background-attachment: fixed;
+            background-position: center;
+            background-attachment: fixed
         }
 
         100% {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/3.png");
+            background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/3.png");
             background-size: cover;
-            background-position: bottom;
-            background-attachment: fixed;
+            background-position: center;
+            background-attachment: fixed
         }
     }
 
     #hero::before {
         background: linear-gradient(#ff000033, #00000033, #00ff0033);
         background-attachment: fixed;
-        /* mix-blend-mode:darken; */
         width: 100%;
         height: 100%;
         content: "";
         position: absolute;
-        z-index: 3;
+        z-index: 3
     }
 
     .hero-porfoli {
         height: calc(100vh/1.2);
         animation-name: hero_porfoli;
         animation-iteration-count: infinite;
-        animation-duration: 6s;
+        animation-duration: 10s;
     }
 
     .flexXL {
         display: flex;
         justify-content: space-between;
-        gap: 2rem;
+        gap: 2rem
     }
 
     #hola .flexXL,
     #projectes .flexXL {
-        gap: 1rem;
+        gap: 1rem
     }
 
     #experiencia .flexXL {
-        justify-content: space-around;
+        justify-content: space-around
     }
-
 
     .dostres {
         flex-grow: 2;
         flex-shrink: 2;
-        flex-basis: calc(200% / 3.3);
+        flex-basis: calc(200% / 3.3)
     }
 
     .untres {
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: calc(100% / 3.3);
+        flex-basis: calc(100% / 3.3)
+    }
+
+    #cv #experiencia .intrawrap .flex {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-shrink: 1;
+        gap: 4rem
+    }
+
+    #cv #experiencia .intrawrap .flex section {
+        flex-basis: 40%
     }
 
 
-    .hero-contacte {
-        height: calc(100vh/2.5);
-        color: white;
-        position: relative;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .5)), url("../img/4.png");
-        /* background-size: cover; */
-        background-size: 40%;
-        background-position: bottom center;
-        background-attachment: fixed;
+    #cv #formacio .intrawrap .flex {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-shrink: 1;
+        gap: 4rem;
     }
 
+    #cv #formacio .intrawrap .flex section {
+        flex-basis: 30%;
+    }
 
 }
 
+/* 1024 ************************* */
 
-
-/* 1024px */
-@media only screen and (min-width: 1024px) {
-
-
-
+@media only screen and (min-width:1024px) {
     .flexXL {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 1rem
     }
-
-
 
     #aficions .flexXL {
         justify-content: space-around;
-        gap: .1rem;
+        gap: .1rem
     }
-
-
 
     #projectes article:nth-child(1) {
         rotate: 4deg;
-        translate: 2rem 1rem;
+        translate: 2rem 1rem
     }
 
     #projectes article:nth-child(2) {
-        translate: 1.5rem 1rem;
+        translate: 1.5rem 1rem
     }
-
 
     #projectes article:nth-child(3) {
         rotate: 0deg;
-        translate: .3rem 1.5rem;
+        translate: .3rem 1.5rem
     }
 
     #projectes article:nth-child(3) {
-        rotate: 8deg;
+        rotate: 8deg
+    }
+
+    #cv h2 {
+        font-size: 3rem
+    }
+
+    #cv .intrawrap {
+        max-width: 100% !important;
+        padding-top: 1rem;
+        padding-left: 8rem;
+        padding-right: 8rem
+    }
+
+    #cv #experiencia .intrawrap .flex section {
+        flex-basis: 40%
     }
 }
 
+/* 1440 ****************************** */
 
-
-
-
-
-/* 1440px */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width:1440px) {
     body {
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
 
     #top {
-        font-size: .9rem;
+        font-size: .9rem
     }
 
+    #cv #experiencia .intrawrap .flex section {
+        flex-basis: 20%
+    }
 }
 
 
+/* 1920 **************************** */
 
-
-
-
-/* 1920px */
-@media only screen and (min-width: 1920px) {
-
+@media only screen and (min-width:1920px) {
     body {
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
 
     #top {
-        font-size: 1rem;
+        font-size: 1rem
     }
-
 }
 
+/* MAX 484 ********************** */
 
-
-
-
-
-
-@media only screen and (max-width: 484px) {
+@media only screen and (max-width:484px) {
     #top {
         position: relative;
         display: block;
@@ -373,16 +347,16 @@
         margin: 0;
         text-align: center;
         padding: 0 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.5rem
     }
 
     #top nav {
         padding: .5rem 0;
-        margin: 0;
+        margin: 0
     }
 
     #top nav li {
-        margin-left: 0;
+        margin-left: 0
     }
 
     #logo img {
@@ -390,19 +364,15 @@
         top: 0;
         max-width: 75vw;
         padding: 0;
-        margin: 3rem 0 1rem 0;
-    }
-
-    #hero {
-        top: 0
+        margin: 3rem 0 1rem 0
     }
 
     #menu-cv {
-        display: none;
+        display: none
     }
 
     ul {
-        padding: 0;
+        padding: 0
     }
 
     nav ul li {
@@ -410,72 +380,62 @@
         margin-top: 1rem;
         border-bottom: 1px solid grey;
         text-align: left;
-        font-size: 1rem;
+        font-size: 1rem
     }
 
     nav ul li:last-child {
-        border: none;
+        border: none
     }
 
     nav a {
-        /* border: 1px solid pink; */
         padding: .75rem .75rem;
-        display: block;
+        display: block
     }
-
 
     nav ul:has(#submenu-cv) li {
-        border: 0;
+        border: 0
     }
 
-
     nav ul li:has(#submenu-cv) {
-        background: #ff0;
+        background: #ff0
     }
 
     nav ul li:has(#submenu-cv) a {
-        color: #000;
+        color: #000
     }
 
     #submenu-cv {
-        display: block;
+        display: block
     }
 
     #submenu-cv li {
         text-align: right;
         content: "-";
         color: black;
-        border-bottom: 1px solid gray !important;
+        border-bottom: 1px solid gray !important
     }
 
     #submenu-cv li:last-child {
-        border-bottom: 0 !important;
-        /* Cada cop que posem un !important mor un pardal de la pena. */
-
+        border-bottom: 0 !important
     }
-
-
 }
 
+/* MAX 319 ******************* */
 
-
-
-@media only screen and (max-width: 319px) {
+@media only screen and (max-width:319px) {
     #idiomes {
-        display: none;
+        display: none
     }
 
     body {
-        font-size: x-small;
+        font-size: x-small
     }
 
     section,
     section>* {
         padding: .25rem;
-        margin: 0;
+        margin: 0
     }
-
-
 
     #top {
         position: relative;
@@ -483,39 +443,35 @@
         height: auto;
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-align: center
     }
-
 
     #logo img {
         position: relative;
-        top: 0;
+        top: 0
     }
-
 
     main {
         padding-top: 0;
-        padding: 0;
+        padding: 0
     }
-
 
     #hero {
         background: none;
-        height: 10vh;
+        height: 10vh
     }
 
     #hero::before {
-        background: none;
+        background: none
     }
 
     #wrapp>header h1 {
         color: #000;
         padding: 1rem .25rem;
-        margin-top: 5rem;
+        margin-top: 5rem
     }
 
     .ilus {
-        width: 85vw;
+        width: 85vw
     }
-
 }
