@@ -105,10 +105,8 @@
         height: 100%;
         background: #000;
         background-blend-mode: darken;
-        z-index: 20;
+        z-index: 20
     }
-
-
 }
 
 @media only screen and (min-width:485px) {
@@ -131,16 +129,13 @@
         margin-bottom: calc(.25*var(--fsxl))
     }
 
-
-
-
     #dades-personals h2 {
         margin-top: 0;
         margin-bottom: 0
     }
 
     #dades-personals ul {
-        list-style: none;
+        list-style: none
     }
 
     @keyframes hero_porfoli {
@@ -201,7 +196,7 @@
         height: calc(100vh/1.2);
         animation-name: hero_porfoli;
         animation-iteration-count: infinite;
-        animation-duration: 10s;
+        animation-duration: 10s
     }
 
     .flexXL {
@@ -244,23 +239,30 @@
         flex-basis: 40%
     }
 
-
     #cv #formacio .intrawrap .flex {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
-        gap: 4rem;
+        gap: 4rem
     }
 
     #cv #formacio .intrawrap .flex section {
-        flex-basis: 30%;
+        flex-basis: 20%;
+    }
+
+    #cv #formacio .intrawrap h3, #cv #formacio .intrawrap ul {
+        margin: 0;
+        padding: 0;
+    }
+
+
+        #cv #formacio .intrawrap .flex section:last-child {
+        flex-basis: 75%
     }
 
 }
-
-/* 1024 ************************* */
 
 @media only screen and (min-width:1024px) {
     .flexXL {
@@ -308,8 +310,6 @@
     }
 }
 
-/* 1440 ****************************** */
-
 @media only screen and (min-width:1440px) {
     body {
         font-size: 1.1rem
@@ -324,9 +324,6 @@
     }
 }
 
-
-/* 1920 **************************** */
-
 @media only screen and (min-width:1920px) {
     body {
         font-size: 1.2rem
@@ -336,8 +333,6 @@
         font-size: 1rem
     }
 }
-
-/* MAX 484 ********************** */
 
 @media only screen and (max-width:484px) {
     #top {
@@ -419,8 +414,6 @@
         border-bottom: 0 !important
     }
 }
-
-/* MAX 319 ******************* */
 
 @media only screen and (max-width:319px) {
     #idiomes {
