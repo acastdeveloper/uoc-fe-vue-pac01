@@ -9,6 +9,10 @@
         color: rgba(255, 255, 0, 1)
     }
 
+
+
+
+
     main>section {
         padding: 3rem 0
     }
@@ -17,8 +21,7 @@
         font-size: var(--fs);
         line-height: var(--fs);
         padding-top: 0;
-        margin: 0;
-        margin-bottom: calc(.5*var(--fs))
+        margin-bottom: var(--fs)
     }
 
     #top {
@@ -92,21 +95,16 @@
     }
 
     #dades-personals {
-        color: black;
-        background-position: bottom;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        mix-blend-mode: darken
+        color: black
     }
 
-    #dades-personals::before {
-        content: " ";
-        height: 100%;
-        background: #000;
-        background-blend-mode: darken;
-        z-index: 20
+    #dades-personals ul {
+        padding: 0;
+        list-style: none
     }
+
+
+
 }
 
 @media only screen and (min-width:485px) {
@@ -116,6 +114,17 @@
         margin: 0;
         box-shadow: 0 0 1rem rgba(0, 0, 0, .5)
     }
+
+    h2 {
+        font-size: var(--fsxl);
+        line-height: var(--fsxl);
+        margin-bottom: calc(var(--fsxl)/2);
+    }
+
+    #dades-personals h2 {
+        margin-top: 0;
+        margin-bottom: 0
+    }
 }
 
 @media only screen and (min-width:768px) {
@@ -123,62 +132,55 @@
         padding: 4rem 0
     }
 
-    h2 {
-        font-size: var(--fsxl);
-        line-height: var(--fsxl);
-        margin-bottom: calc(.25*var(--fsxl))
-    }
-
-    #dades-personals h2 {
-        margin-top: 0;
-        margin-bottom: 0
-    }
-
-    #dades-personals ul {
-        list-style: none
-    }
-
     @keyframes hero_porfoli {
         0% {
             background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/3.png");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed
+            background-attachment: fixed;
         }
+
+
 
         20% {
             background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/2.png");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed
+            background-attachment: fixed;
         }
+
 
         40% {
             background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/4.png");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed
+            background-attachment: fixed;
         }
+
+
+
 
         60% {
             background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/mockup.jpg");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed
+            background-attachment: fixed;
         }
+
 
         80% {
             background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/a1.png");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed
+            background-attachment: fixed;
         }
+
+
 
         100% {
             background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url("../img/3.png");
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed
+            background-attachment: fixed;
         }
     }
 
@@ -193,7 +195,8 @@
     }
 
     .hero-porfoli {
-        height: calc(100vh/1.2);
+        /* height: calc(100vh/1.2); */
+        height: calc(70vh);
         animation-name: hero_porfoli;
         animation-iteration-count: infinite;
         animation-duration: 10s
@@ -228,7 +231,7 @@
 
     #cv #experiencia .intrawrap .flex {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
@@ -245,26 +248,30 @@
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
-        gap: 4rem
+        gap: 1%
     }
 
     #cv #formacio .intrawrap .flex section {
-        flex-basis: 20%;
+        flex-basis: 22%
     }
 
-    #cv #formacio .intrawrap h3, #cv #formacio .intrawrap ul {
+    #cv #formacio .intrawrap h3,
+    #cv #formacio .intrawrap ul {
         margin: 0;
-        padding: 0;
+        padding: 0
     }
 
-
-        #cv #formacio .intrawrap .flex section:last-child {
+    #cv #formacio .intrawrap .flex section:last-child {
         flex-basis: 75%
     }
-
 }
 
 @media only screen and (min-width:1024px) {
+    header:has(#top) .supratop {
+        width: 100%;
+        z-index: 100
+    }
+
     .flexXL {
         display: flex;
         justify-content: space-between;
@@ -295,7 +302,9 @@
     }
 
     #cv h2 {
-        font-size: 3rem
+        font-size: 3rem;
+        margin: 0;
+        padding: 0
     }
 
     #cv .intrawrap {
@@ -307,6 +316,22 @@
 
     #cv #experiencia .intrawrap .flex section {
         flex-basis: 40%
+    }
+
+    #menu-cv ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+
+    #menu-cv ul li {
+        flex-grow: 1;
+        border-bottom: 0;
+        border-left: 1px solid black
+    }
+
+    #menu-cv ul li a {
+        padding: .25rem 0
     }
 }
 
@@ -367,8 +392,11 @@
     }
 
     ul {
-        padding: 0
+        padding: 0;
+        list-style: none;
     }
+
+
 
     nav ul li {
         display: block;
@@ -403,16 +431,31 @@
         display: block
     }
 
+    #menu-cv li {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.4rem;
+    }
+
     #submenu-cv li {
         text-align: right;
-        content: "-";
         color: black;
-        border-bottom: 1px solid gray !important
+        border-bottom: 1px solid gray !important;
     }
 
     #submenu-cv li:last-child {
         border-bottom: 0 !important
     }
+
+
+    #accepto {
+        display: inline;
+    }
+
+
+
+
+
+
 }
 
 @media only screen and (max-width:319px) {
@@ -421,7 +464,13 @@
     }
 
     body {
-        font-size: x-small
+        font-size: calc(100vw/24);
+    }
+
+    h1 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: calc(100vw/6);
+        /* letter-spacing: -1px; */
     }
 
     section,
@@ -466,5 +515,9 @@
 
     .ilus {
         width: 85vw
+    }
+
+    article {
+        margin-bottom: 1rem;
     }
 }

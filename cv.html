@@ -6,63 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículum</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" async>
     <link rel="stylesheet" href="./assets/css/mediaqueries.css">
 </head>
 
 <body>
     <div id="wrapp">
+
         <header>
-            <section id="top">
-                <figure id="logo">
-                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="home" id="imagotipus"></a>
-                </figure>
-                <div id="logotipus">ALEXANDER CASTELLÓ<br><small class="fs_tresquarts"><mark>#D E S I G N V E L O V E
-                            R</mark></small></div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" title="Porfoli">Dossier</a></li>
-                        <li><a href="cv.html" title="Currículum" class="sel">CV</a>
+            <div class="supratop">
+                <section id="top">
+                    <figure id="logo">
+                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="home" id="imagotipus"></a>
+                    </figure>
+                    <div id="logotipus">ALEXANDER CASTELLÓ<br><small class="fs_tresquarts"><mark
+                                id="tagname"></mark></small></div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" title="Porfoli">Dossier</a></li>
+                            <li><a href="cv.html" title="Currículum" class="sel">CV</a>
 
-                            <ul id="submenu-cv">
-                                <li><a href="#dades-personals">Dades Personals</a></li>
-                                <li><a href="#experiencia">Experiència</a></li>
-                                <li><a href="#formacio">Formació</a></li>
-                                <li><a href="#competencies-digitals">Competències Digitals</a></li>
-                                <li><a href="#idiomes">Idiomes</a></li>
-                            </ul>
+                                <ul id="submenu-cv">
+                                    <li><a href="#dades-personals">Dades de contacte</a></li>
+                                    <li><a href="#experiencia">Experiència</a></li>
+                                    <li><a href="#formacio">Formació</a></li>
+                                    <li><a href="#competencies-digitals">Competències Digitals</a></li>
+                                    <li><a href="#idiomes">Idiomes</a></li>
+                                </ul>
 
-                        </li>
-                        <li><a href="contacte.html" title="Contacte">Contacte</a></li>
-                    </ul>
-                </nav>
+                            </li>
+                            <li><a href="contacte.html" title="Contacte">Contacte</a></li>
+                        </ul>
+                    </nav>
 
-            </section>
+                </section>
 
 
+                <section id="menu-cv">
+                    <aside>
+                        <ul>
+                            <li><a href="#dades-personals">DADES DE CONTACTE</a></li>
+                            <li><a href="#experiencia">EXPERIÈNCIA</a></li>
+                            <li><a href="#formacio">FORMACIÓ</a></li>
+                            <li><a href="#competencies-digitals">COMPETÈNCIES DIGITALS</a></li>
+                            <li><a href="#idiomes">IDIOMES</a></li>
+                        </ul>
+                    </aside>
+                </section>
+            </div>
 
+
+            <div class="infratop"></div>
 
 
         </header>
 
+
         <main id="cv">
-            <section id="menu-cv">
-                <aside>
-                    <ul>
-                        <li><a href="#dades-personals">DADES PERSONALS</a></li>
-                        <li><a href="#experiencia">EXPERIÈNCIA</a></li>
-                        <li><a href="#formacio">FORMACIÓ</a></li>
-                        <li><a href="#competencies-digitals">COMPETÈNCIES DIGITALS</a></li>
-                        <li><a href="#idiomes">IDIOMES</a></li>
-                    </ul>
-                </aside>
-            </section>
 
 
             <section id="dades-personals">
                 <div class=" intrawrap">
-                    <h2>Dades personals</h2>
-                    <ul>
+                    <h2>Dades de contacte</h2>
+                    <ul class="flex">
                         <li>ac.multiv@gmail.com</li>
                         <li>github.com/acastdeveloper</li>
                         <li>linkedin.com/in/acastdev</li>
@@ -78,7 +84,7 @@
                 <div class="intrawrap">
 
                     <h2>Experiència</h2>
-                    <div class="flex">
+                    <div>
                         <section>
                             <h3>2009-2000 (+9 anys)<br>
                                 FORMADOR OCUPACIONAL - DISSENY DE PÀGINES WEB</h3>
@@ -154,7 +160,7 @@
                         <section>
                             <h3 id="formacio-reglada">FORMACIÓ REGLADA</h3>
                             <ul>
-                                <li>Universitat de Barcelona - Física, fins 2n de carrera.</li>
+                                <li>Universitat de Barcelona - Física, fins 2n.</li>
                                 <li>Batxillerat i COU. (IB. Milà i Fontanals).</li>
                             </ul>
                             <h3>Certificats de professionalitat</h3>

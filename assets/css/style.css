@@ -24,6 +24,8 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+
+
 body,
 figure {
     padding: 0;
@@ -43,15 +45,14 @@ p {
 
 #formacio ul li,
 #competencies-digitals ul li {
-    padding: .25rem 1rem;
+    padding: .3rem .3rem;
     list-style: none;
-    text-indent: -.3rem;
+    text-indent: -.35rem;
 }
 
 #formacio ul li::before,
 #competencies-digitals ul li::before {
-    content: "- ";
-    /* padding: 0rem .25rem; */
+    content: "⇒ "
 }
 
 a {
@@ -248,7 +249,8 @@ nav ul li a {
 
 .hero-porfoli {
     color: white;
-    position: relative
+    position: relative;
+    background-position: center;
 }
 
 .hero-cv {
