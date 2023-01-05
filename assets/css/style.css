@@ -64,6 +64,10 @@ a:hover {
     text-decoration: underline;
 }
 
+#logotipus a {
+ color: white;;
+}
+
 body::-webkit-scrollbar {
     background-color: #00000099;
 }
@@ -154,7 +158,7 @@ h2 {
 }
 
 .fs_tresquarts {
-    font-size: 1.4rem
+    font-size: 1.3rem
 }
 
 #tagname::after {
