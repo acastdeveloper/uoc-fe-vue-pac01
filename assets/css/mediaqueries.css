@@ -238,7 +238,7 @@
     }
 
     #cv #formacio .intrawrap .flex section {
-        flex-basis: 22%
+        flex-basis: 30%
     }
 
     #cv #formacio .intrawrap h3,
@@ -248,7 +248,11 @@
     }
 
     #cv #formacio .intrawrap .flex section:last-child {
-        flex-basis: 75%
+        flex-basis: 65%
+    }
+
+    #cv #competencies-digitals .intrawrap {
+        column-count: 2;
     }
 }
 
@@ -300,7 +304,7 @@
         padding-right: 8rem
     }
 
-    #cv #experiencia  .flex  {
+    #cv #experiencia .flex {
         display: flex;
         flex-direction: row;
     }
@@ -309,6 +313,15 @@
     #cv #experiencia .intrawrap .flex section {
         flex-basis: 46%
     }
+
+    #cv #formacio .doscols {
+        column-count: 2;
+    }
+
+    #cv #competencies-digitals .intrawrap {
+        column-count: 3;
+    }
+
 
     #menu-cv ul {
         display: flex;
@@ -344,6 +357,8 @@
     #cv #experiencia .intrawrap .flex section {
         flex-basis: 20%
     }
+
+
 }
 
 @media only screen and (min-width:1920px) {
