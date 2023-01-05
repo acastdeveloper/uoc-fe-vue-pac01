@@ -24,8 +24,6 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
-
-
 body,
 figure {
     padding: 0;
@@ -65,7 +63,8 @@ a:hover {
 }
 
 #logotipus a {
- color: white;;
+    color: white;
+    ;
 }
 
 body::-webkit-scrollbar {

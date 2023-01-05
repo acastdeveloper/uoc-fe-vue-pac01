@@ -1,6 +1,4 @@
 @media only screen and (min-width:320px) {
-
-
     #wrapp>header h1 {
         font-family: 'Bebas Neue', cursive;
         font-size: calc(100vw/6);
@@ -9,7 +7,7 @@
         padding: 0;
         opacity: 1;
         color: #ff0d;
-        mix-blend-mode: lighten;
+        mix-blend-mode: lighten
     }
 
     main>section {
@@ -221,11 +219,11 @@
         flex-wrap: wrap;
         flex-grow: 1;
         flex-shrink: 1;
-        gap: 4rem
+        gap: 2rem
     }
 
     #cv #experiencia .intrawrap .flex section {
-        flex-basis: 40%
+        flex-basis: 47%
     }
 
     #cv #formacio .intrawrap .flex {
@@ -252,7 +250,7 @@
     }
 
     #cv #competencies-digitals .intrawrap {
-        column-count: 2;
+        column-count: 2
     }
 }
 
@@ -306,22 +304,20 @@
 
     #cv #experiencia .flex {
         display: flex;
-        flex-direction: row;
+        flex-direction: row
     }
-
 
     #cv #experiencia .intrawrap .flex section {
         flex-basis: 46%
     }
 
     #cv #formacio .doscols {
-        column-count: 2;
+        column-count: 2
     }
 
     #cv #competencies-digitals .intrawrap {
-        column-count: 3;
+        column-count: 3
     }
-
 
     #menu-cv ul {
         display: flex;
@@ -357,8 +353,6 @@
     #cv #experiencia .intrawrap .flex section {
         flex-basis: 20%
     }
-
-
 }
 
 @media only screen and (min-width:1920px) {
