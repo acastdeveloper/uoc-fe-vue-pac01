@@ -454,5 +454,9 @@ main>section header {
 }
 
 #wrapp>footer img {
-    height: 30px;
+    height: 30px; /* No és bona pràctica donar alçada a les icones ni a les imatges */
 }
+
+
+/* no s'ha d'abusar dels ID, perquè et carregues uns dels principis bàsics del CSS (especificitat)
+recordatori: Els principis bàsics del CSS són: Especificitat, cascada i herència. */
